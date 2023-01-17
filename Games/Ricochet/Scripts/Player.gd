@@ -1,14 +1,15 @@
 extends KinematicBody2D
 
 # ----- Variable Setup -----
+export var acceleration = 250
+export var speed_mult = 1
+
 var velocity = Vector2.ZERO
-var acceleration = 250
-var speed_mult = 1
 var friction = 125
 
 # ----- Moving The Paddle -----
 func _physics_process(delta):
-	if (Input.is_action_pressed("fire")):
+	if (Input.is_action_pressed("action_2")):
 		speed_mult = 0.5
 	else:
 		speed_mult = 1

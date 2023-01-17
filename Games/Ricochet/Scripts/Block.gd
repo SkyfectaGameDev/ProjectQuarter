@@ -14,3 +14,4 @@ func _physics_process(delta):
 		get_node("BlockSprite").texture = block_sprite2
 	elif (health == 3):
 		get_node("BlockSprite").texture = block_sprite3
+	
