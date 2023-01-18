@@ -54,19 +54,16 @@ texture = ExtResource( 2 )
 stretch_mode = 2
 
 [node name="BorderColliderL" type="CollisionShape2D" parent="Borders"]
-visible = false
 position = Vector2( 56, 180 )
 scale = Vector2( 8, 45 )
 shape = SubResource( 3 )
 
 [node name="BorderColliderR" type="CollisionShape2D" parent="Borders"]
-visible = false
 position = Vector2( 584, 180 )
 scale = Vector2( 8, 45 )
 shape = SubResource( 4 )
 
 [node name="BorderColliderTop" type="CollisionShape2D" parent="Borders"]
-visible = false
 position = Vector2( 320, 8 )
 scale = Vector2( 8, 45 )
 shape = SubResource( 1 )
@@ -85,5 +82,6 @@ position = Vector2( 192, 64 )
 health = 3
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
+collision/safe_margin = 0.2
 
 [node name="Ball" parent="." instance=ExtResource( 5 )]
