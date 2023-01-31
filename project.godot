@@ -8,6 +8,16 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Resource",
+"class": "PlayerContainer",
+"language": "GDScript",
+"path": "res://Games/Ricochet/Scripts/PlayerContainer.gd"
+} ]
+_global_script_class_icons={
+"PlayerContainer": ""
+}
+
 [application]
 
 config/name="Project Quarter"

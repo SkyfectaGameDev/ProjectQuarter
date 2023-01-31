@@ -83,5 +83,6 @@ health = 3
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
 collision/safe_margin = 0.2
+player_length = 6
 
 [node name="Ball" parent="." instance=ExtResource( 5 )]

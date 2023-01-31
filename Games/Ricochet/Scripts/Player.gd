@@ -10,14 +10,20 @@ onready var paddle_mid = get_node("PaddleMiddle")
 onready var paddle_right = get_node("PaddleRight")
 onready var collider = get_node("Collider")
 
+const player_container = preload("res://Games/Ricochet/Resources/PlayerContainer.tres")
+
 var velocity = Vector2.ZERO
 var friction = 125
 var collider_update = CapsuleShape2D.new()
 
+# ----- Player Setup -----
+func _ready():
+	player_container.player = self
+	player_container.player_width = (player_length * 8) + 16;
+
 # ----- Change Paddle Size -----
 func player_size():
 	paddle_mid.scale.x = player_length
-	print(player_length)
 	paddle_left.position = Vector2(paddle_mid.position.x + ((paddle_mid.scale.x * -8) / 2), paddle_mid.position.y)
 	paddle_right.position = Vector2(paddle_mid.position.x + ((paddle_mid.scale.x * 8) / 2), paddle_mid.position.y)
 	collider_update.height = player_length * 8 + 8
